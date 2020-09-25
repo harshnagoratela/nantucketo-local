@@ -1,10 +1,10 @@
 ---
 template: HomePage
 slug: ''
-title: headless - the shopify + gatsby starter theme for digital commerce
+title: Nantucket store & blog
 featuredImage: './images/headless_hero.jpg'
 subtitle: >-
-  ## the shopify + gatsby starter theme for digital commerce
+  ## for Nantucketers near & far
 
 accordion:
   - content: >-
@@ -21,13 +21,11 @@ accordion:
     title: download theme for free (today!)
 meta:
   description: >-
-    the shopify + gatsby starter theme for digital commerce
-  title: headless
+    NANTUCKETO: a Nantucket store & blog for Nantucketers near & far. Established in 2005 as Nantucket Brand Clothing. Shop for Nantucket men's, women's and kids' clothing and read our new Nantucket blog.  
+  title: Nantucket store & blog for Mantucketers everywhere | Hop Aboard today
 ---
 
 
-##Headless commerce for Shopify with GatsbyJS
 
-<a href="https://github.com/ecomloop/headless/" target="_blank" aria-label="Fork ecomloop/headless on GitHub" class="Nav--CTA">download on Github</a>
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/ecomloop/headless" target="_blank" aria-label="Fork ecomloop/headless on GitHub" class="Nav--CTA">Deploy to Netlify</a>
+<a href="/products/"  aria-label="shop now" class="Nav--CTA">shop all products</a>

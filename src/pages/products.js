@@ -3,11 +3,11 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import ProductGrid from '../components/ProductGrid'
 
-const ServicesPage = () => (
-  <Layout>
+const ProductsPage = () => (
+  <Layout title="a Nantucket shop" description="a nantucket store & blog for nantucketers everywhere">
     <PageHeader
-      title="shop the demo store"
-      subtitle="check out the aweswome products"
+      title="Shop"
+      subtitle="Shop all products"
       backgroundImage="../images/headless_hero.jpg"
     />
     <section className="section">
@@ -18,4 +18,4 @@ const ServicesPage = () => (
   </Layout>
 )
 
-export default ServicesPage
+export default ProductsPage

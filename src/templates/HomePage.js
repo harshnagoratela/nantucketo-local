@@ -9,15 +9,15 @@ import Accordion from '../components/Accordion'
 
 export const convertProductsToPostFormat = products => {
   let formattedProducts = []
-  products.forEach(service => {
+  products.forEach(product => {
     let singleItem = {
-      title: service.title,
-      excerpt: _.truncate(service.description, {
+      title: product.title,
+      excerpt: _.truncate(product.description, {
         length: 140,
         omission: `…`,
       }),
-      featuredImage: service.images[0].originalSrc,
-      slug: '/product/' + service.handle,
+      featuredImage: product.images[0].originalSrc,
+      slug: '/product/' + product.handle,
     }
     formattedProducts.push(singleItem)
   })
@@ -44,22 +44,24 @@ export const HomePageTemplate = ({
       backgroundImage={featuredImage}
     />
 
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
-      </div>
-    </section>
+
 
     {!!products.length && convertProductsToPostFormat(products) && (
       <section className="section">
         <div className="container">
           <PostSection
-            title="demo shop"
+            title="new products"
             posts={convertProductsToPostFormat(products)}
           />
         </div>
       </section>
     )}
+
+    <section className="section">
+      <div className="container">
+        <Content source={body} />
+      </div>
+    </section>
 
     <section className="section">
       <div className="container">
@@ -144,7 +146,7 @@ export const pageQuery = graphql`
 
     products: allShopifyProduct(
       sort: { fields: publishedAt, order: DESC }
-      limit: 3
+      limit: 6
     ) {
       edges {
         node {

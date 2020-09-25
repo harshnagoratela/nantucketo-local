@@ -24,16 +24,19 @@ const ProductPage = ({ data }) => {
         itemType="http://schema.org/BlogPosting"
       >
         <div className="container skinny">
-          <Link className="SingleService--BackButton" to="/solutions/">
+          <Link className="SingleService--BackButton" to="/products/">
             <ChevronLeft /> BACK
           </Link>
           <div className="SingleService--Content relative">
+          <h1 className="SingleService--Title" itemProp="title">
+            {product.title}
+          </h1>
             <ProductGalleryThumbnails productimages={product.images} />
 
             {product.title && (
-              <h1 className="SingleService--Title" itemProp="title">
+              <h3 className="SingleService--Title" itemProp="title">
                 {product.title}
-              </h1>
+              </h3>
             )}
 
             <div className="SingleService--InnerContent">
@@ -47,17 +50,17 @@ const ProductPage = ({ data }) => {
               {thisEdge && thisEdge.previous && thisEdge.previous.handle && (
                 <Link
                   className="SingleService--Pagination--Link prev"
-                  to={`/service/${thisEdge.previous.handle}`}
+                  to={`/product/${thisEdge.previous.handle}`}
                 >
-                  Previous Service
+                  Previous
                 </Link>
               )}
               {thisEdge && thisEdge.next && thisEdge.next.handle && (
                 <Link
                   className="SingleService--Pagination--Link next"
-                  to={`/solution/${thisEdge.next.handle}`}
+                  to={`/product/${thisEdge.next.handle}`}
                 >
-                  Next Service
+                  Next
                 </Link>
               )}
             </div>

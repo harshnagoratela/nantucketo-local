@@ -7,9 +7,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'headless',
-    description: 'the shopify + gatsby starter theme for digital commerce',
-    siteUrl: 'https://github.com/ecomloop/headless-starter',
+    title: 'nantucketo',
+    description: 'a nantucket store & blog for nantucketers everywhere',
+    siteUrl: 'https://nantucketo.com',
   },
   plugins: [
     'gatsby-transformer-yaml',
@@ -118,11 +118,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'headless',
-        short_name: 'headless',
+        name: 'nantucketo',
+        short_name: 'nantucketo',
         start_url: '/',
         background_color: '#00C2BD',
-        theme_color: '#00C2BD',
+        theme_color: '#ff4f00',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',

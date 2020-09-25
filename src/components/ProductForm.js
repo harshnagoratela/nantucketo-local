@@ -38,7 +38,7 @@ const ProductForm = ({ product }) => {
     },
     [client.product, productVariant.shopifyId, variants]
   )
-/* eslint-ensable react-hooks/exhaustive-deps */ 
+/* eslint-ensable react-hooks/exhaustive-deps */
   useEffect(() => {
     checkAvailability(product.shopifyId)
   }, [productVariant, checkAvailability, product.shopifyId])
@@ -67,7 +67,7 @@ const ProductForm = ({ product }) => {
     let addCartReturn = addVariantToCart(productVariant.shopifyId, quantity)
     addCartReturn.then(function() {
       //window.open(checkout.webUrl)
-      window.open('/cart', '_self')
+      window.open('/cart/', '_self')
     })
   }
 
@@ -150,7 +150,7 @@ const ProductForm = ({ product }) => {
         disabled={!available || adding}
         onClick={handleAddToCart}
       >
-        Get Started
+        Add to Cart
       </button>
 
       <h3>

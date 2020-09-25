@@ -5,7 +5,7 @@
   --midGrey: #09BC8A;
   --darkGrey: #004346;
   --danger: #ff3d3d;
-  --font-primary: 'DM Mono', monospace;
+  --font-primary: 'Noto Sans', monospace;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-font-family: 'DM Mono', monospace;
+font-family: 'Noto Sans', monospace;
   min-height: 100%;
   position: relative;
   background: white;
