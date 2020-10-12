@@ -1,35 +1,37 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
 
-const ArticlesPage = ({ data: { allGoogleSheetLinksRow } }) => {
-  const allArticles = allGoogleSheetLinksRow.edges.map(article => ({
-    ...article.node,
-    slug: `/article/${article.node.articleid}/`,
-    date: article.node.dateadded,
+const BlogIndexPage = ({ data: { allGoogleSheetLinksRow } }) => {
+  const allPosts = allGoogleSheetLinksRow.edges.map(post => ({
+    ...post.node,
+    slug: `/blog/${post.node.articleid}/`,
+    date: post.node.dateadded,
+    featuredImage: 'https://source.unsplash.com/1600x900/?abstract.'+ post.node.articleid,
   }))
 
   return (
     <Layout title="a Nantucket shop" description="a nantucket store & blog for nantucketers everywhere">
       <PageHeader
-        title="Articles"
-        subtitle="See all articles"
+        title="Blog Posts"
+        subtitle="See all posts"
         backgroundImage="../images/headless_hero.jpg"
       />
       <section className="section">
         <div className="container">
-          <PostSection title="Recent Articles" posts={allArticles} />
+          <PostSection title="Recent Blog Posts" posts={allPosts} />
         </div>
       </section>
     </Layout>
   )
 }
 
-export default ArticlesPage
+export default BlogIndexPage
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query BlogIndexPage {
     allGoogleSheetLinksRow(sort: {fields: dateadded, order: DESC}) {
       edges {
         node {
